@@ -32,7 +32,7 @@ const validateUsername = (username) => {
         {
             return "No Space Allowed";
         }
-        else if(username.includes("admin"))
+        else if(username.toLowerCase().includes("admin"))
         {
             return "Reserved Word";
         }
