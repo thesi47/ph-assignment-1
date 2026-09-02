@@ -43,10 +43,10 @@ const validateUsername = (username) => {
     }
 
 function getCngFare(dist, isNight = false , waitTime = 0) {
-    let fare = 50 + ((dist - 2) * 15) + (waitTime * 2);
+    let fare = dist <=2? 50 : 50 + ((dist - 2) * 15) + (waitTime * 2);
     return isNight ? (fare + (fare * (20/100)))  : fare; 
 }
-
+console.log(getCngFare(1))
 const getChaseVerdict = (target, score, ballsLeft) => {
     let needed = target - score;
     let reqRate = (needed / ballsLeft) * 6;
